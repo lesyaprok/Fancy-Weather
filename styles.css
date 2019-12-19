@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     transition: 0.7s;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .wrapper {
@@ -56,11 +56,12 @@ body {
     width: 70px;
     height: 40px;
     border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.884);
+    background-color: rgba(3, 0, 12, 0.877);
     color: rgba(255, 247, 247, 0.747);
     font-size: 18px;
     outline: none;
     border: none;
+    box-shadow: 0px 0px 6px rgba(172, 166, 158, 0.7);
 }
 
 .language, .temperature-buttons {
@@ -77,6 +78,7 @@ body {
     text-align: center;
     letter-spacing: 1.2px;
     font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 
@@ -84,7 +86,7 @@ body {
     display: flex;
     align-items: center;
     padding-left: 15%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .weather-on-day div {
@@ -110,7 +112,9 @@ body {
     grid-area: three-day;
     display: flex;
     justify-content: space-evenly;
-    padding-top: 50px;
+    margin-top: 70px;
+    padding-bottom: 20px;
+    margin: 70px auto 0 auto;
 }
 
 .small_icon {
@@ -195,4 +199,44 @@ body {
     height: 100%;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     border-radius: 5px;
+}
+
+@media screen and (max-width: 640px) {
+    .wrapper {
+        margin: 0;
+        max-width: 640px;
+        height: 100%;
+        font-size: 2rem;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas: 
+        "control control"
+        "info info"
+        "day day"
+        "day day"
+        "three-day three-day"
+        "search ."
+        "map map" 
+        "map map"  
+        /* "map map" */
+        "geo geo";
+    }
+    /* .control {
+        max-width: 640px;
+    } */
+    #map {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .temperature-buttons,
+    .reload,
+    .language {
+        width: 100px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    .search {
+        
+        top: 100px;
+    }
 }
