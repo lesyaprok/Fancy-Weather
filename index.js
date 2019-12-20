@@ -66,7 +66,7 @@
 
 
 
-//time and date
+// time and date
 // const weekdays = {
 //     en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
 //     ru: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
@@ -88,7 +88,7 @@
 // d3.innerHTML = weekdays.en[getAday + 3];
 
 
-//смена языков
+// смена языков
 // const lang = document.getElementById('language');
 // const cel_far = document.getElementById('temperature-buttons');
 
@@ -161,7 +161,7 @@
 // )
 
 
-//широта-долгота
+// широта-долгота
 // function success(position) {
 //     document.getElementById('latitude').innerText = ConvertDEGToDMS(`${(position.coords.latitude).toFixed(2)}`);
 //     document.getElementById('longitude').innerText = ConvertDEGToDMS(`${(position.coords.longitude).toFixed(2)}`);
@@ -320,7 +320,7 @@
 // }
 
 
-//функция для геокода
+// функция для геокода
 // const getGeoCode = (cityName) => {
 //     fetch(`https://api.opencagedata.com/geocode/v1/json?q=${cityName}&key=541e04cb4db34cd6ac61480c36ab855b`)
 //         .then(res => res.json()).then(data => {
@@ -342,7 +342,7 @@
 // }
 // )
 
-//ненужная хрень
+// ненужная хрень
 
 // document.getElementById('search').addEventListener('click', () => 
 // cityName = document.getElementById('search-input').value,
@@ -351,7 +351,7 @@
 
 
 
-//SpeachRecognition
+// SpeachRecognition
 // const microphone = document.getElementById('microphone');
 // microphone.onclick = () => {
 //     window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;

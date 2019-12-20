@@ -2,7 +2,7 @@ let cityName;
 const daily = `https://api.openweathermap.org/data/2.5/weather?q=cityName&lang=en&units=metric&APPID=7628b84858689e70d784fa009f97eea5`;
 const threeDays = `https://api.openweathermap.org/data/2.5/forecast?q=cityName&lang=en&units=metric&APPID=7628b84858689e70d784fa009f97eea5`;
 
-//карта
+//map
 mapboxgl.accessToken = 'pk.eyJ1IjoibGVzeWFwcm9rIiwiYSI6ImNrM3pwMGJxazA2MjYzbW10NTA5YzBtd2MifQ.LxzBp9Ou93eEfYgCMqC4tA';
 var map = new mapboxgl.Map({
     container: "map",
@@ -12,13 +12,15 @@ var map = new mapboxgl.Map({
 });
 //zoom, current location
 map.addControl(new mapboxgl.NavigationControl());
-const control = () => {map.addControl(new mapboxgl.GeolocateControl({
-    positionOptions: {
-        enableHighAccuracy: true
-    },
-    showUserLocation: true,
-    trackUserLocation: true
-}));}
+const control = () => {
+    map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        showUserLocation: true,
+        trackUserLocation: true
+    }));
+}
 control()
 
 //geocoder

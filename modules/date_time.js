@@ -4,8 +4,17 @@ const weekdays = {
     by: ['Панядзелак', 'Аўторак', 'Серада', 'Чацьвер', 'Пятніца', 'Субота', 'Нядзеля', 'Панядзелак', 'Аўторак', 'Серада']
 }
 
-setInterval(() => time.innerHTML = `${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`, 0, 60000);
+
+//setInterval(() => time.innerHTML = `${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit})}`, 0, 60000);
 // date.innerHTML = new Date().toDateString();
+// const current = () => time.innerHTML = `${currentTime}`;
+
+const current = () => time.innerHTML = `${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`
+const updateTime = () => {
+    current()
+    setTimeout(updateTime, 1000 * 60)
+}
+updateTime();
 const options = { weekday: 'short', month: 'long', day: 'numeric' }
 date.innerHTML = new Date().toLocaleDateString('en-EN', options);
 

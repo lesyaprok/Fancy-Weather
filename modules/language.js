@@ -23,11 +23,11 @@ lang.addEventListener('change', e => {
         d2.innerHTML = weekdays.ru[getAday + 2];
         d3.innerHTML = weekdays.ru[getAday + 3];
         document.getElementById('h').innerText = 'ВЛАЖНОСТЬ: ',
-            document.getElementById('w').innerText = 'ВЕТЕР: ',
-            document.getElementById('f').innerText = 'ОЩУЩАЕТСЯ: ',
-            document.getElementById('ltd').innerText = 'Широта: ',
-            document.getElementById('lng').innerText = 'Долгота: ',
-            date.innerHTML = new Date().toLocaleDateString('ru-RU', options),
+        document.getElementById('w').innerText = 'ВЕТЕР: ',
+        document.getElementById('f').innerText = 'ОЩУЩАЕТСЯ: ',
+        document.getElementById('ltd').innerText = 'Широта: ',
+        document.getElementById('lng').innerText = 'Долгота: ',
+        date.innerHTML = new Date().toLocaleDateString('ru-RU', options),
             fetch(daily.replace('cityName', `${cityName}`).replace('lang=en' || 'lang=be', 'lang=ru'))
                 .then(res => res.json()).then(data => {
                     document.getElementById('description').innerHTML = (data.weather[0].description).toUpperCase()
